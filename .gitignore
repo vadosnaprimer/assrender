@@ -1,0 +1,10 @@
+*.aps
+*.db
+*.opendb
+*.opensdf
+*.sdf
+*.suo
+*.user
+/bin
+/msvc
+/obj
