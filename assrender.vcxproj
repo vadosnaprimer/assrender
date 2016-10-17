@@ -102,7 +102,7 @@
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(SolutionDir)msvc\lib\$(PlatformTarget)\</AdditionalLibraryDirectories>
-      <AdditionalDependencies>libassd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>libassd.lib;AviSynth.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -118,7 +118,7 @@
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(SolutionDir)msvc\lib\$(PlatformTarget)\</AdditionalLibraryDirectories>
-      <AdditionalDependencies>libassd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>libassd.lib;AviSynth.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
