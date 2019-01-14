@@ -6,7 +6,8 @@ This also means that it is much more picky about script syntax than VSFilter
 and friends, so keep that in mind before blaming the filter. Yes, people have
 reported a lot of errors that were actually the script author’s fault.
 
-Usage:
+Usage
+
 assrender(clip, string file, [string vfr, int hinting, float scale,
         float line_spacing, float dar, float sar, int top, int bottom, int left,
         int right, string charset, int debuglevel, string fontdir,
