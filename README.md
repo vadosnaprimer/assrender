@@ -6,8 +6,8 @@ This also means that it is much more picky about script syntax than VSFilter
 and friends, so keep that in mind before blaming the filter. Yes, people have
 reported a lot of errors that were actually the script author’s fault.
 
-Usage
-
+# Usage
+```
 assrender(clip, string file, [string vfr, int hinting, float scale,
         float line_spacing, float dar, float sar, int top, int bottom, int left,
         int right, string charset, int debuglevel, string fontdir,
@@ -48,3 +48,4 @@ string colorspace:
     Default is to use the ASS script’s “Video Colorspace” property, else guess
     based on video resolution (width > 1920 or height > 1080 → BT.2020,
     then width > 1280 or height > 576 → BT.709).
+```
