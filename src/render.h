@@ -24,28 +24,28 @@
 #define dblend(srcA, srcC, dstA, dstC, outA) \
     (((srcA * srcC * 255 + dstA * dstC * (255 - srcA) + (outA >> 1)) / outA))
 
-inline void col2rgb(uint32_t* c, uint8_t* r, uint8_t* g, uint8_t* b)
+static void col2rgb(uint32_t* c, uint8_t* r, uint8_t* g, uint8_t* b)
 {
     *r = _r(*c);
     *g = _g(*c);
     *b = _b(*c);
 }
 
-inline void col2yuv601(uint32_t* c, uint8_t* y, uint8_t* u, uint8_t* v)
+static void col2yuv601(uint32_t* c, uint8_t* y, uint8_t* u, uint8_t* v)
 {
     *y = div65536(16829 * _r(*c) + 33039 * _g(*c) + 6416 * _b(*c)) + 16;
     *u = div65536(-9714 * _r(*c) - 19070 * _g(*c) + 28784 * _b(*c)) + 128;
     *v = div65536(28784 * _r(*c) - 24103 * _g(*c) - 4681 * _b(*c)) + 128;
 }
 
-inline void col2yuv709(uint32_t* c, uint8_t* y, uint8_t* u, uint8_t* v)
+static void col2yuv709(uint32_t* c, uint8_t* y, uint8_t* u, uint8_t* v)
 {
     *y = div65536(11966 * _r(*c) + 40254 * _g(*c) + 4064 * _b(*c)) + 16;
     *u = div65536(-6596 * _r(*c) - 22189 * _g(*c) + 28784 * _b(*c)) + 128;
     *v = div65536(28784 * _r(*c) - 26145 * _g(*c) - 2639 * _b(*c)) + 128;
 }
 
-inline void col2yuv2020(uint32_t* c, uint8_t* y, uint8_t* u, uint8_t* v)
+static void col2yuv2020(uint32_t* c, uint8_t* y, uint8_t* u, uint8_t* v)
 {
     *y = div65536(14786 * _r(*c) + 38160 * _g(*c) + 3338 * _b(*c)) + 16;
     *u = div65536(-8038 * _r(*c) - 20746 * _g(*c) + 28784 * _b(*c)) + 128;
