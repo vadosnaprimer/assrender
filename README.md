@@ -169,14 +169,77 @@ Default is to use the ASS script’s “Video Colorspace” property, else guess
 # Licenses
   For all modules: see msvc/licenses
 
+# Links
+* Doom9 forum: https://forum.doom9.org/showthread.php?t=148926
+* Avisynth wiki: http://avisynth.nl/index.php/AssRender
+
 # Change log
 
 ## 0.29 (20210216 - pinterf)
 * project moved to https://github.com/pinterf/assrender from https://github.com/vadosnaprimer/assrender
-* Move to VS2019 - v142 platform toolset
+* Move to Visual Studio 2019 - v142 platform toolset
 * Add .def module definition file for Avisynth 2.6 std compatibility (function name mangling)
 * Update Avisynth C headers
 * Check Linux and gcc-MinGW CMake build
-* Add build instructions to README
+* Add build instructions and change log to README
 
-## 0.28 (?)
+## no version (20190114 - vadosnaprimer)
+* https://github.com/vadosnaprimer/assrender/
+* add batch that lets not to change deps sdk and vs version copied from SMP libass
+* update SMP submodules
+
+## no version (20161018 - Blitzker)
+* https://github.com/Blitzker/assrender
+* Visual Studio 2015 support
+
+## 0.28 (20120226 - pingplug)
+* small changes and update version to 0.28
+
+## 0.27 (20150202 - pingplug)
+* https://github.com/pingplug/assrender
+* add a simple .rc file :-)
+* cache the last img to rend faster if img not changed 
+* add YUY2 and YV16 support
+
+## 0.25 (20120420 - lachs0r)
+* moved to github
+* code restructured
+* added support for the BT.709 color space and the 'Video Colorspace' property that has been introduced with recent versions of Aegisub.
+* binary:
+  - updated everything, switched to MinGW-w64 (same toolchain as mplayer2 now)
+
+## 0.24.1 (20110922 - lachs0r)
+* binary changes only
+* binary:
+  - updated libass to current git HEAD
+  - switched Harfbuzz to libass’ compatibility branch  
+  - compiled Harfbuzz without Uniscribe backend
+  fixes lots of crashes and misbehavior
+
+## 0.24 (20110729)
+* fixing the performance regression
+
+## 0.23 (20110728)
+* disabled font hinting by default
+* binary:
+* updated libass to current git HEAD and included Harfbuzz:
+* added support for bidirectional text, Arabic shaping etc.
+* added proper support for @fonts (vertical writing)
+* slight performance regression (glyph cache not hooked up with Harfbuzz yet)
+* updated FreeType to current git HEAD:
+* fixed outline stroker for some broken fonts
+
+## 0.22 (20110618 - lachs0r) 
+* fixed that annoying hang on vector clips
+
+## 0.21 (20110608 - lachs0r) 
+* fixed YV12 subsampling so it no longer looks horrible, which should be rather good news for most users.
+
+## 0.20 
+* fixed RGB32 support (it’s actually usable with BlankClip(pixel_type="RGB32") now).
+
+## ?.?? (20110125 - lachs0r)
+* AssRender as an Avisynth C Plugin, so it no longer required building with MSVC.
+
+## 0.11 TheFluff
+* Source code (under MIT license, binaries are under GPL for obvious reasons): assrender_0.11-src.7z
