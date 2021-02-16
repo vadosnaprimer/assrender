@@ -68,18 +68,20 @@ Default is to use the ASS script’s “Video Colorspace” property, else guess
 ## Windows Visual Studio 2019
 
 * Clone repo
-  Clone https://github.com/pinterf/assrender from IDE or 
-    git clone https://github.com/pinterf/assrender
-    git submodule update --init --recursive --remote
 
+  Clone https://github.com/pinterf/assrender from IDE or 
+ 
+  git clone https://github.com/pinterf/assrender
+  git submodule update --init --recursive --remote
+ 
   Prequisite: vsyasm integration
-    - get VSYASM from https://github.com/ShiftMediaProject/VSYASM
-    - run install_script.bat
+  - get VSYASM from https://github.com/ShiftMediaProject/VSYASM
+  - run install_script.bat
     
   Prequisite: avisynth.lib versions
-    - find in Avisynth+ C API installation
-    - copy them to repo_dir\lib\x86-64\ and repo_dir\lib\x86-32\
-      32 and 64 bit versions respectively
+  - find in Avisynth+ C API installation
+  - copy them to repo_dir\lib\x86-64\ and repo_dir\lib\x86-32\
+    32 and 64 bit versions respectively
 
 * Build:
     Open solution file from IDE
