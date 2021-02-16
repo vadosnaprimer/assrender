@@ -63,9 +63,9 @@ The color space of your (YUV) video. Possible values:
  
 Default is to use the ASS script’s “Video Colorspace” property, else guess based on video resolution (width > 1920 or height > 1080 → BT.2020, then width > 1280 or height > 576 → BT.709).
 
-Build instructions
-==================
-Windows Visual Studio 2019
+# Build instructions
+
+## Windows Visual Studio 2019
 
 * Clone repo
   Clone https://github.com/pinterf/assrender from IDE or 
@@ -84,7 +84,7 @@ Windows Visual Studio 2019
 * Build:
     Open solution file from IDE
 
-Windows GCC (mingw installed by msys2)
+## Windows GCC (mingw installed by msys2)
 
   Prequisite: avisynth.lib versions
     - find in Avisynth+ C API installation
@@ -143,7 +143,7 @@ Windows GCC (mingw installed by msys2)
   cmake --build . --config Release --clean-first 
 
 
-Linux
+## Linux
 * Clone repo
 
         git clone https://github.com/pinterf/assrender
@@ -160,3 +160,18 @@ Linux
 
         cd build
         sudo make install
+
+# Licenses
+  For all modules: see msvc/licenses
+
+# Change log
+
+- 0.29 (20210216 - pinterf)
+  project moved to https://github.com/pinterf/assrender from https://github.com/vadosnaprimer/assrender
+  Move to VS2019 - v142 platform toolset
+  Add .def module definition file for Avisynth 2.6 std compatibility (function name mangling)
+  Update Avisynth C headers
+  Check Linux and gcc-MinGW CMake build
+  Add build instructions to README
+
+- 0.28 (?)
