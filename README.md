@@ -70,10 +70,10 @@ Default is to use the ASS script’s “Video Colorspace” property, else guess
 * Clone repo
 
   Clone https://github.com/pinterf/assrender from IDE or 
- 
-  git clone https://github.com/pinterf/assrender
-  git submodule update --init --recursive --remote
- 
+
+      git clone https://github.com/pinterf/assrender
+      git submodule update --init --recursive --remote
+
   Prequisite: vsyasm integration
   - get VSYASM from https://github.com/ShiftMediaProject/VSYASM
   - run install_script.bat
@@ -89,9 +89,9 @@ Default is to use the ASS script’s “Video Colorspace” property, else guess
 ## Windows GCC (mingw installed by msys2)
 
   Prequisite: avisynth.lib versions
-    - find in Avisynth+ C API installation
-    - copy them to repo_dir\lib\x86-64\ and repo_dir\lib\x86-32\
-      32 and 64 bit versions respectively
+  - find in Avisynth+ C API installation
+  - copy them to repo_dir\lib\x86-64\ and repo_dir\lib\x86-32\
+    32 and 64 bit versions respectively
 
   Prequisite: libass package (see below)
 
@@ -99,24 +99,26 @@ Default is to use the ASS script’s “Video Colorspace” property, else guess
 
   List libass versions
   --------------------
-  $ pacman -Ss libass
-
-    mingw32/mingw-w64-i686-libass 0.15.0-1
-      A portable library for SSA/ASS subtitles rendering (mingw-w64)
-    mingw64/mingw-w64-x86_64-libass 0.15.0-1
-      A portable library for SSA/ASS subtitles rendering (mingw-w64)
+  
+      $ pacman -Ss libass
+      
+      mingw32/mingw-w64-i686-libass 0.15.0-1
+        A portable library for SSA/ASS subtitles rendering (mingw-w64)
+      mingw64/mingw-w64-x86_64-libass 0.15.0-1
+        A portable library for SSA/ASS subtitles rendering (mingw-w64)
 
   Get
   ---
   for x64 version:
-  $ pacman -S mingw64/mingw-w64-x86_64-libass
+  
+      $ pacman -S mingw64/mingw-w64-x86_64-libass
 
-    resolving dependencies...
-    looking for conflicting packages...
-    warning: dependency cycle detected:
-    warning: mingw-w64-x86_64-harfbuzz will be installed before its mingw-w64-x86_64-freetype dependency
-
-    Packages (10) mingw-w64-x86_64-fontconfig-2.13.93-1
+      resolving dependencies...
+      looking for conflicting packages...
+      warning: dependency cycle detected:
+      warning: mingw-w64-x86_64-harfbuzz will be installed before its mingw-w64-x86_64-freetype dependency
+      
+      Packages (10) mingw-w64-x86_64-fontconfig-2.13.93-1
                   mingw-w64-x86_64-freetype-2.10.4-1
                   mingw-w64-x86_64-fribidi-1.0.10-2
                   mingw-w64-x86_64-glib2-2.66.4-1
@@ -126,54 +128,55 @@ Default is to use the ASS script’s “Video Colorspace” property, else guess
                   mingw-w64-x86_64-wineditline-2.205-3
                   mingw-w64-x86_64-libass-0.15.0-1
 
-    Total Download Size:    6.92 MiB
-    Total Installed Size:  42.31 MiB
+      Total Download Size:    6.92 MiB
+      Total Installed Size:  42.31 MiB
 
-    :: Proceed with installation? [Y/n]
+      :: Proceed with installation? [Y/n]
     
-  Choose Y and wait
+    Choose Y and wait
 
 * Clone repo
-  git clone https://github.com/pinterf/assrender
+
+      git clone https://github.com/pinterf/assrender
+        
   NOT needed (we have libass as package): git submodule update --init --recursive --remote
 
 * Build
   from the 'build' folder under project root:
 
-  del ..\CMakeCache.txt
-  cmake .. -G "MinGW Makefiles"
-  cmake --build . --config Release --clean-first 
-
+      del ..\CMakeCache.txt
+      cmake .. -G "MinGW Makefiles"
+      cmake --build . --config Release --clean-first 
 
 ## Linux
 * Clone repo
 
-        git clone https://github.com/pinterf/assrender
-        NOT needed: git submodule update --init --recursive --remote
-        cd assrender
-        cmake -B build -S .
-        cmake --build build --clean-first
+      git clone https://github.com/pinterf/assrender
+      NOT needed: git submodule update --init --recursive --remote
+      cd assrender
+      cmake -B build -S .
+      cmake --build build --clean-first
 
 * Find binaries at
     
-        build/assrender/libassrender.so
+      build/assrender/libassrender.so
 
 * Install binaries
 
-        cd build
-        sudo make install
+      cd build
+      sudo make install
 
 # Licenses
   For all modules: see msvc/licenses
 
 # Change log
 
-- 0.29 (20210216 - pinterf)
-  project moved to https://github.com/pinterf/assrender from https://github.com/vadosnaprimer/assrender
-  Move to VS2019 - v142 platform toolset
-  Add .def module definition file for Avisynth 2.6 std compatibility (function name mangling)
-  Update Avisynth C headers
-  Check Linux and gcc-MinGW CMake build
-  Add build instructions to README
+## 0.29 (20210216 - pinterf)
+* project moved to https://github.com/pinterf/assrender from https://github.com/vadosnaprimer/assrender
+* Move to VS2019 - v142 platform toolset
+* Add .def module definition file for Avisynth 2.6 std compatibility (function name mangling)
+* Update Avisynth C headers
+* Check Linux and gcc-MinGW CMake build
+* Add build instructions to README
 
-- 0.28 (?)
+## 0.28 (?)
