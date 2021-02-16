@@ -248,5 +248,6 @@ const char* AVSC_CC avisynth_c_plugin_init(AVS_ScriptEnvironment* env)
                      "[sar]f[top]i[bottom]i[left]i[right]i[charset]s"
                      "[debuglevel]i[fontdir]s[srt_font]s[colorspace]s",
                      assrender_create, 0);
-    return "AssRender 0.28: draws text subtitles better and faster than ever before";
+    return "AssRender 0.29: draws text subtitles better and faster than ever before";
+    // for Windows DLL : update version in .rc as well
 }
