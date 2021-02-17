@@ -195,25 +195,25 @@ AVS_Value AVSC_CC assrender_create(AVS_ScriptEnvironment* env, AVS_Value args,
 
     switch (fi->vi.pixel_type)
     {
-    case 0xA0000008:
+    case AVS_CS_YV12:
         data->apply = apply_yv12;
         break;
-    case 0xA0000308:
+    case AVS_CS_YV16:
         data->apply = apply_yv16;
         break;
-    case 0xA000030B:
+    case AVS_CS_YV24:
         data->apply = apply_yv24;
         break;
-    case 0xE0000000:
+    case AVS_CS_Y8:
         data->apply = apply_y8;
         break;
-    case 0x60000004:
+    case AVS_CS_YUY2:
         data->apply = apply_yuy2;
         break;
-    case 0x50000001:
+    case AVS_CS_BGR24:
         data->apply = apply_rgb;
         break;
-    case 0x50000002:
+    case AVS_CS_BGR32:
         data->apply = apply_rgba;
         break;
     default:
