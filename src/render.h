@@ -52,13 +52,23 @@ static void col2yuv2020(uint32_t* c, uint8_t* y, uint8_t* u, uint8_t* v)
     *v = div65536(28784 * _r(*c) - 26469 * _g(*c) - 2315 * _b(*c)) + 128;
 }
 
+void make_sub_img(ASS_Image* img, uint8_t** sub_img, uint32_t width, fColMat color_matrix, int bits_per_pixel, int rgb);
+void make_sub_img16(ASS_Image* img, uint8_t** sub_img, uint32_t width, fColMat color_matrix, int bits_per_pixel, int rgb);
+
 void apply_rgba(uint8_t** sub_img, uint8_t** data, uint32_t* pitch, uint32_t width, uint32_t height);
 void apply_rgb(uint8_t** sub_img, uint8_t** data, uint32_t* pitch, uint32_t width, uint32_t height);
+void apply_rgb48(uint8_t** sub_img, uint8_t** data, uint32_t* pitch, uint32_t width, uint32_t height);
+void apply_rgb64(uint8_t** sub_img, uint8_t** data, uint32_t* pitch, uint32_t width, uint32_t height);
 void apply_yuy2(uint8_t** sub_img, uint8_t** data, uint32_t* pitch, uint32_t width, uint32_t height);
 void apply_yv12(uint8_t** sub_img, uint8_t** data, uint32_t* pitch, uint32_t width, uint32_t height);
 void apply_yv16(uint8_t** sub_img, uint8_t** data, uint32_t* pitch, uint32_t width, uint32_t height);
 void apply_yv24(uint8_t** sub_img, uint8_t** data, uint32_t* pitch, uint32_t width, uint32_t height);
 void apply_y8(uint8_t** sub_img, uint8_t** data, uint32_t* pitch, uint32_t width, uint32_t height);
+void apply_yuv420(uint8_t** sub_img, uint8_t** data, uint32_t* pitch, uint32_t width, uint32_t height);
+void apply_yuv422(uint8_t** sub_img, uint8_t** data, uint32_t* pitch, uint32_t width, uint32_t height);
+void apply_yuv444(uint8_t** sub_img, uint8_t** data, uint32_t* pitch, uint32_t width, uint32_t height);
+void apply_y(uint8_t** sub_img, uint8_t** data, uint32_t* pitch, uint32_t width, uint32_t height);
+void apply_yv411(uint8_t** sub_img, uint8_t** data, uint32_t* pitch, uint32_t width, uint32_t height);
 
 AVS_VideoFrame* AVSC_CC assrender_get_frame(AVS_FilterInfo* p, int n);
 
