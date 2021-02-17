@@ -175,6 +175,10 @@ Default is to use the ASS script’s “Video Colorspace” property, else guess
 
 # Change log
 
+## 0.30 (20210217 - pinterf)
+* 10-16 bit support (including RGB48 and RGB64)
+* YV411, Planar RGB support
+
 ## 0.29 (20210216 - pinterf)
 * project moved to https://github.com/pinterf/assrender from https://github.com/vadosnaprimer/assrender
 * Move to Visual Studio 2019 - v142 platform toolset
