@@ -33,6 +33,7 @@ typedef struct {
     int bits_per_pixel;
     int pixelsize;
     int rgb_fullscale;
+    int greyscale;
 } udata;
 
 #endif

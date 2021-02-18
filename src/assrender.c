@@ -177,7 +177,7 @@ AVS_Value AVSC_CC assrender_create(AVS_ScriptEnvironment* env, AVS_Value args,
     }
 
     if (avs_is_rgb(&fi->vi)) {
-        data->color_matrix = col2rgb;
+      data->color_matrix = col2rgb;
     } else {
         if (!strcasecmp(tmpcsp, "bt.709") || !strcasecmp(tmpcsp, "rec709"))
             data->color_matrix = col2yuv709;
@@ -197,6 +197,7 @@ AVS_Value AVSC_CC assrender_create(AVS_ScriptEnvironment* env, AVS_Value args,
 
     const int bits_per_pixel = avs_bits_per_component(&fi->vi);
     const int pixelsize = avs_component_size(&fi->vi);
+    const int greyscale = avs_is_y(&fi->vi);
 
     if (bits_per_pixel == 8)
       data->f_make_sub_img = make_sub_img;
@@ -293,6 +294,7 @@ AVS_Value AVSC_CC assrender_create(AVS_ScriptEnvironment* env, AVS_Value args,
     data->bits_per_pixel = bits_per_pixel;
     data->pixelsize = pixelsize;
     data->rgb_fullscale = avs_is_rgb(&fi->vi);
+    data->greyscale = greyscale;
 
     fi->user_data = data;
 

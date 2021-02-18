@@ -816,15 +816,25 @@ AVS_VideoFrame* AVSC_CC assrender_get_frame(AVS_FilterInfo* p, int n)
         uint32_t height, width, pitch[2];
         uint8_t* data[3];
 
-        if (avs_is_planar(&p->vi)) {
+        if (avs_is_planar(&p->vi) && !ud->greyscale) {
+          if (avs_is_rgb(&p->vi)) {
+            // planar RGB as 444
+            data[0] = avs_get_write_ptr_p(src, AVS_PLANAR_R);
+            data[1] = avs_get_write_ptr_p(src, AVS_PLANAR_G);
+            data[2] = avs_get_write_ptr_p(src, AVS_PLANAR_B);
+            pitch[0] = avs_get_pitch(src); 
+          }
+          else {
             data[0] = avs_get_write_ptr_p(src, AVS_PLANAR_Y);
             data[1] = avs_get_write_ptr_p(src, AVS_PLANAR_U);
             data[2] = avs_get_write_ptr_p(src, AVS_PLANAR_V);
             pitch[0] = avs_get_pitch_p(src, AVS_PLANAR_Y);
             pitch[1] = avs_get_pitch_p(src, AVS_PLANAR_U);
-        } else {
-            data[0] = avs_get_write_ptr(src);
-            pitch[0] = avs_get_pitch(src);
+          }
+        }
+        else {
+          data[0] = avs_get_write_ptr(src);
+          pitch[0] = avs_get_pitch(src);
         }
 
         height = p->vi.height;
