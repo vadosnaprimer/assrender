@@ -195,9 +195,15 @@ AVS_Value AVSC_CC assrender_create(AVS_ScriptEnvironment* env, AVS_Value args,
         }
     }
 
+#ifdef FOR_AVISYNTH_26_ONLY
+    const int bits_per_pixel = 8;
+    const int pixelsize = 1;
+    const int greyscale = avs_is_y8(&fi->vi);
+#else
     const int bits_per_pixel = avs_bits_per_component(&fi->vi);
     const int pixelsize = avs_component_size(&fi->vi);
     const int greyscale = avs_is_y(&fi->vi);
+#endif
 
     if (bits_per_pixel == 8)
       data->f_make_sub_img = make_sub_img;
