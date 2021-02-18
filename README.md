@@ -174,8 +174,12 @@ Default is to use the ASS script’s “Video Colorspace” property, else guess
 * Avisynth wiki: http://avisynth.nl/index.php/AssRender
 
 # Change log
+## 0.31 (20210218 - pinterf)
+* Fix colors for planar RGB
+* code: hidden ifdef FOR_AVISYNTH_26_ONLY for Avisynth 2.6-only build
 
 ## 0.30 (20210217 - pinterf)
+* From now assrender does not works with classic Aviysnth: high-bitdepth helper function calls
 * 10-16 bit support (including RGB48 and RGB64)
 * YV411, Planar RGB support
 
