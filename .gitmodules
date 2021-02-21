@@ -16,9 +16,6 @@
 [submodule "SMP/libxml2"]
 	path = SMP/libxml2
 	url = https://github.com/ShiftMediaProject/libxml2.git
-[submodule "fribidi"]
-	path = fribidi
-	url = https://github.com/ShiftMediaProject/fribidi.git
 [submodule "SMP/fribidi"]
 	path = SMP/fribidi
 	url = https://github.com/ShiftMediaProject/fribidi.git
