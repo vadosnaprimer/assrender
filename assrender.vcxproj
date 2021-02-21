@@ -163,6 +163,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="src\assrender.h" />
+    <ClInclude Include="src\avisynth_c.h" />
     <ClInclude Include="src\render.h" />
     <ClInclude Include="src\sub.h" />
     <ClInclude Include="src\timecodes.h" />
