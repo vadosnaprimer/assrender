@@ -219,6 +219,7 @@ AVS_Value AVSC_CC assrender_create(AVS_ScriptEnvironment* env, AVS_Value args,
     switch (fi->vi.pixel_type)
     {
     case AVS_CS_YV12:
+    case AVS_CS_I420:
         data->apply = apply_yv12;
         break;
     case AVS_CS_YUV420P10:
@@ -321,6 +322,5 @@ const char* AVSC_CC avisynth_c_plugin_init(AVS_ScriptEnvironment* env)
                      "[sar]f[top]i[bottom]i[left]i[right]i[charset]s"
                      "[debuglevel]i[fontdir]s[srt_font]s[colorspace]s",
                      assrender_create, 0);
-    return "AssRender 0.31: draws text subtitles better and faster than ever before";
-    // for Windows DLL : update version in .rc as well
+    return "AssRender 0.32: draws text subtitles better and faster than ever before";
 }
