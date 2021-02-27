@@ -174,6 +174,9 @@ Default is to use the ASS script’s “Video Colorspace” property, else guess
 * Avisynth wiki: http://avisynth.nl/index.php/AssRender
 
 # Change log
+## 0.32 (20210227 - pinterf)
+* Fix: treat I420 variant as YV12 instead of unsupported color space
+
 ## 0.31 (20210218 - pinterf)
 * Fix colors for planar RGB
 * code: hidden ifdef FOR_AVISYNTH_26_ONLY for Avisynth 2.6-only build
