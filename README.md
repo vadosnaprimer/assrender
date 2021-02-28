@@ -174,6 +174,9 @@ Default is to use the ASS script’s “Video Colorspace” property, else guess
 * Avisynth wiki: http://avisynth.nl/index.php/AssRender
 
 # Change log
+## 0.33 (20210228 - pinterf)
+* Fix: wrong Bt.709 matrix
+
 ## 0.32 (20210227 - pinterf)
 * Fix: treat I420 variant as YV12 instead of unsupported color space
 
