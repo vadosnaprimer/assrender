@@ -6,6 +6,7 @@
 #include <math.h>
 #include <string.h>
 #include <ass/ass.h>
+#include "avs/config.h"
 #ifdef AVS_WINDOWS
 #include "avisynth_c.h"
 #else
