@@ -177,7 +177,7 @@ Recognized .ASS properties: "tv.601" "tv.709". Other values like "pc.601" "pc.70
 # Change log
 ## 0.34 (20210301 - pinterf)
 * Fix the fix: revert matrix change made in 0.33	
-* Fix: Check matrix from .ASS file "YCbCr Matrix:" section besides of "Video Colorspace:"
+* Fix: Check matrix from .ASS file "YCbCr Matrix:" section besides "Video Colorspace:"
   Recognized values are "tv.601" and "tv.709"
 
 ## 0.33 (20210228 - pinterf)
